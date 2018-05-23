@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无缝轮播图</title>
+	<style>
+		div {
+			width: 1344px;
+			height: 108px;
+			margin: 200px auto;
+			position: relative;
+			overflow: hidden;
+			border: 3px solid #ccc;
+		}
+		ul {
+			width: 2688px;
+			height: 108px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			position: absolute;
+			left: 0;
+			animation: move 9s linear infinite;
+			/*animation（动画）:  move(动画名称)，9s(持续时间：9秒)，linear(运动过渡类型：线性过渡)，infinite(循环次数:无限循环)*/
+		}
+		li {
+			float: left;
+		}
+		@keyframes move {
+			0%{
+				
+			}
+			100%{
+				transform:translateX(-1344px)
+			}
+		}
+		ul:hover{
+			animation-play-state: paused; /*鼠标移动的轮播图时 动画停止    running:播放  paused: 暂停*/
+			/* animation-play-state:检索或设置对象动画的状态*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="./images/1.jpg" alt=""></li>
+			<li><img src="./images/2.jpg" alt=""></li>
+			<li><img src="./images/3.jpg" alt=""></li>
+			<li><img src="./images/4.jpg" alt=""></li>
+			<li><img src="./images/5.jpg" alt=""></li>
+			<li><img src="./images/6.jpg" alt=""></li>
+			<li><img src="./images/7.jpg" alt=""></li>
+			<li><img src="./images/1.jpg" alt=""></li>
+			<li><img src="./images/2.jpg" alt=""></li>
+			<li><img src="./images/3.jpg" alt=""></li>
+			<li><img src="./images/4.jpg" alt=""></li>
+			<li><img src="./images/5.jpg" alt=""></li>
+			<li><img src="./images/6.jpg" alt=""></li>
+			<li><img src="./images/7.jpg" alt=""></li>
+		</ul>	
+	</div>
+</body>
+</html>
